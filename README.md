@@ -7,6 +7,8 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
 * TBF:
 
   Token Bucket Filter, 是某種控制封包格式與頻寬限制的演算法，對於突發傳輸 Burst Transmission 和一般的網路傳輸有用。
+  
+  https://en.wikipedia.org/wiki/Burst_transmission
 
 * CBQ:
 
