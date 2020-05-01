@@ -41,6 +41,10 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
     bandwidth 是網路裝置的實體頻寬。
     
     weight 是 root class 的權重，權重越大， root class 一次處理的資料比例越大，建議是 bandwidth 的 1/10。
+    
+    Rate 是分配給本 class 的頻寬，單位是 bit || bps，bit == bits/sec，bps == bytes/sec。
+    
+    weight 是本 class 的權重，建議為 Rate 的 1/10，權重值越大，本 class 在 root class 之內一次處理的資料量比例越高。
 
 # Bandwidth
    
