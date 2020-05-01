@@ -144,3 +144,5 @@ RED Hat Linux:
         BRIDGE=br0   
    
  # VLAN
+ 
+ 使用 vconfig 指令
