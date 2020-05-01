@@ -29,6 +29,18 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
   （3）各 class 分別準備設定檔
   
   （4）對設定檔描述頻寬的控制方法
+  
+  * Device:
+  
+    設定了要控制頻寬的網路裝置，格式如下：
+    
+    DEVICE=<ifname>,<bandwidth>[,<weight>]
+  
+    ifname 是網路介面的名稱。
+    
+    bandwidth 是網路裝置的實體頻寬。
+    
+    weight 是 root class 的權重，權重越大， root class 一次處理的資料比例越大，建議是 bandwidth 的 1/10。
 
 # Bandwidth
    
