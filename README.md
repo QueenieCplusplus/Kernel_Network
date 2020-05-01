@@ -60,7 +60,9 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
           
  啟動腳本：
  
+ CBQ 設定是透過 tc, traffic control, 不過 tc 指令的選項很多，非常複雜。
  
+     # chmod 777 /usr/share/doc/iproute-2.6.18/examples/cbq.init-v0.7.3
 
 # Bandwidth
    
