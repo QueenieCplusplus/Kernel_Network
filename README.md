@@ -113,6 +113,9 @@ https://github.com/QueenieCplusplus/SSCP_Network/blob/master/README.md
       collisions: 0 txqueuelen: 500
 
 
+                        ethernet frame sender                 thernet frame rcv
+     OS -------> TAP Device -------------> user-space app ----> network stack -----> TAP Device -------> OS
+
 # Bridge
    
  # VLAN
