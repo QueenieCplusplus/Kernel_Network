@@ -6,7 +6,7 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
 
 * TBF:
 
-  Token Bucket Filter, 是某種控制封包格式與頻寬限制的演算法，對於突發傳輸 Burst Transmission 和一般的網路傳輸有用。對於網路設定而言，TBF 是 queueing discipline 序列的規範之一，負責暫存封包。 對於普遍常見的 NIC 來說，其頻寬速度為 Gigabit Ethernet，Buffer 的大小推薦設為 10kb/8。
+  Token Bucket Filter, 是某種控制封包格式與頻寬限制的演算法，對於突發傳輸 Burst Transmission 和一般的網路傳輸有用。對於網路設定而言，TBF 是 queueing discipline 序列的規範之一，負責暫存封包。 對於普遍常見的 NIC 來說，其頻寬速度為 Gigabit Ethernet (位元)，Buffer 的大小推薦設為 10kb/8。
   
   https://en.wikipedia.org/wiki/Burst_transmission
   
