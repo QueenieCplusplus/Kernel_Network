@@ -2,7 +2,7 @@
 
 Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Scheduler (封包排程器)的頻寬控制功能。透過它，可以控制各網路裝置傳送資料的吞吐量。使用頻寬控制功能，可以優先服務重要的通訊，調整各服務效能。
 
-# Bandwidth
+# Bandwidth, 頻寬設定
 
 詞彙錦囊：
 
@@ -74,7 +74,7 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
  
      # chmod 777 /usr/share/doc/iproute-2.6.18/examples/cbq.init-v0.7.3
    
-# Tunneling
+# Tunneling, 隧道
    
 # Bridge
    
