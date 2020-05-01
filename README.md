@@ -119,5 +119,28 @@ https://github.com/QueenieCplusplus/SSCP_Network/blob/master/README.md
          ///////
 
 # Bridge
+
+OS 啟動後，可設定自動建立 Bridge，設定方式隨著使用的 distribution 而異。
+
+RED Hat Linux:
+
+     /etc/sysconfig/network-scripts 目錄下的 ifcfg-br0 檔名
+     
+        DEVICE=br0
+        TYPE=Bridge
+        BOOTPROTO=dhcp
+        ONBOOT=yes
+        STP=off
+        
+     另外，要為連上 bridge 的網路介面 編輯 ifcfg-<interface-name> 設定檔，
+     將之設定為 Bridge，同時加上 NM_CONTROLLED = no 讓他們不被 Network Mgmt 管理
+     
+    ifcfg-eth0 檔名
+     
+        DEVICE=etho
+        HWADDR= **:**:**:**:**:**
+        NM_CONTROLLED=n0
+        ONBOOT=yes
+        BRIDGE=br0   
    
  # VLAN
