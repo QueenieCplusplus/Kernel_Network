@@ -9,12 +9,14 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
   Class Based Queue, 類別基礎的序列。需要先安裝 iproute 套件。 
   
      //
-      # cat /etc/sysconfig.cbq/cbq-0000.example
-      DEVICE=eth0,10Mbit,1Mbit
-      Rate=128Kbit
-      WEIGHT=10Kbit
-      PRIO=5
-      RULE=192.168.1.0/24
+     
+     
+            # cat /etc/sysconfig.cbq/cbq-0000.example
+            DEVICE=eth0,10Mbit,1Mbit
+            Rate=128Kbit
+            WEIGHT=10Kbit
+            PRIO=5
+            RULE=192.168.1.0/24
 
 # Bandwidth
    
