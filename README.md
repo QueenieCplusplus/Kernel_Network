@@ -83,17 +83,26 @@ https://github.com/QueenieCplusplus/SSCP_Network/blob/master/README.md
 
     無論是 OSI 第二層的 TAP 裝置抑或是第三層 TUN , Linux Ｋernel 引進 TUN/TAP 驅動程式，輕易建立了 TUN/TAP 裝置，實現隧道網路。
     
-    如下針對 TUN device tun0 執行 ifconfig。
 
-    #ifconfig tun0 
-    
-    tun0 Link encap: (略)
-    inet addr: 192.168.1.1 P-t-P:192.168.1.2 Mask:255.255.255.255(or 248)
-    UP POINTOPOINT RUNNING NOARP MULTICAST MTU:1500 (1字節==8bits=1byte) Metric:1
-    RX packets: 0 errors: 0 dropped: 0 overruns: 0 frames: 0
-    TX packets: 0 errors: 0 dropped: 0 overruns: 0 carriers: 0
-    collisions: 0 txqueuelen: 500
+* Layer 3
+
+
+      如下針對 TUN device tun0 執行 ifconfig。
+
+      #ifconfig tun0 
+
+      tun0 Link encap: (略)
+      inet addr: 192.168.1.1 P-t-P:192.168.1.2 Mask:255.255.255.255(or 248)
+      UP POINTOPOINT RUNNING NOARP MULTICAST MTU:1500 (1字節==8bits=1byte) Metric:1
+      RX packets: 0 errors: 0 dropped: 0 overruns: 0 frames: 0
+      TX packets: 0 errors: 0 dropped: 0 overruns: 0 carriers: 0
+      collisions: 0 txqueuelen: 500
    
+   
+* Layer 2
+
+
+
 # Bridge
    
  # VLAN
