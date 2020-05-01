@@ -20,7 +20,7 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
             
                                                         //
                                                         
-  此檔案定義了
+  * 此檔案定義了
   
   （1）優先順序
   
@@ -30,11 +30,11 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
   
   （4）對設定檔描述頻寬的控制方法
   
-  * Device:
+     * Device:
   
     設定了要控制頻寬的網路裝置，格式如下：
     
-    DEVICE=<ifname>,<bandwidth>[,<weight>]
+       DEVICE=<ifname>,<bandwidth>[,<weight>]
   
     * ifname 是網路介面的名稱。
     
@@ -47,6 +47,10 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
     * weight 是本 class 的權重，建議為 Rate 的 1/10，權重值越大，本 class 在 root class 之內一次處理的資料量比例越高。
     
     * PRIO 是本 class 的優先度，可指定範圍為 1 ~ 8，數值越小，優先度越高。
+    
+    * Rule 是指定控制頻寬的對象。可以限定通訊對象的 IP 位置或是 port 編號，所以可以只控制 HTTP 或是 FTP 的頻寬。格式如下：
+    
+      RULE = [[saddr[/prefix][:port[/mask]],][daddr[/prefix]][:port[/mask]]]
 
 # Bandwidth
    
