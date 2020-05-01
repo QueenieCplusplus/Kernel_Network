@@ -34,7 +34,7 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
   
     設定了要控制頻寬的網路裝置，格式如下：
     
-       DEVICE=<ifname>,<bandwidth>[,<weight>]
+        DEVICE=<ifname>,<bandwidth>[,<weight>]
   
     * ifname 是網路介面的名稱。
     
@@ -50,11 +50,13 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
     
     * RULE 是指定控制頻寬的對象。可以限定通訊對象的 IP 位置或是 port 編號，所以可以只控制 HTTP 或是 FTP 的頻寬。格式如下：
     
-      RULE = [[saddr[/prefix][:port[/mask]],][daddr[/prefix]][:port[/mask]]]
+          RULE = [[saddr[/prefix][:port[/mask]],][daddr[/prefix]][:port[/mask]]]
       
     * TIME 時間參數可以根據時間帶與星期幾，變更頻寬速度與權重設定。
     
-     TIME=[<dow>,<dow>,...,<dow>/]<form>-<till>;<rate>/<weight>[/<peak>]
+    
+    
+          TIME=[<dow>,<dow>,...,<dow>/]<form>-<till>;<rate>/<weight>[/<peak>]
 
 # Bandwidth
    
