@@ -102,6 +102,16 @@ https://github.com/QueenieCplusplus/SSCP_Network/blob/master/README.md
 * Layer 2
 
 
+      如下針對 TAP device tun0 執行 ifconfig。
+
+      #ifconfig tap0 
+
+      tap0 Link encap: Ethernet HWaddr D2:76:E4:DD:E0:F8 
+      Broadcast MULTICAST MTU:1500 (1字節==8bits=1byte) Metric:1
+      RX packets: 0 errors: 0 dropped: 0 overruns: 0 frames: 0
+      TX packets: 0 errors: 0 dropped: 0 overruns: 0 carriers: 0
+      collisions: 0 txqueuelen: 500
+
 
 # Bridge
    
