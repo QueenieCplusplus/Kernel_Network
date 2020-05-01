@@ -57,6 +57,10 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
     
     
           TIME=[<dow>,<dow>,...,<dow>/]<form>-<till>;<rate>/<weight>[/<peak>]
+          
+ 啟動腳本：
+ 
+ 
 
 # Bandwidth
    
