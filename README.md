@@ -23,8 +23,11 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
   此檔案定義了
   
   （1）優先順序
+  
   （2）以 class 為單位分配傳送頻寬
+  
   （3）各 class 分別準備設定檔
+  
   （4）對設定檔描述頻寬的控制方法
 
 # Bandwidth
