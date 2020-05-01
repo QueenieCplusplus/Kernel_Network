@@ -52,7 +52,9 @@ Linux Kernel 實作了 Network Scheduler (網路排程器)、或稱為 Packet Sc
     
       RULE = [[saddr[/prefix][:port[/mask]],][daddr[/prefix]][:port[/mask]]]
       
-    * TIME
+    * TIME 時間參數可以根據時間帶與星期幾，變更頻寬速度與權重設定。
+    
+     TIME=[<dow>,<dow>,...,<dow>/]<form>-<till>;<rate>/<weight>[/<peak>]
 
 # Bandwidth
    
