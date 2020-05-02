@@ -148,4 +148,8 @@ RED Hat Linux:
  使用 vconfig 指令
  
 Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛擬切割的功能，實體的乙太網路可以透過 VLAN ID 切成許多的虛擬網路。 VLAN 環境下，具備相同的 VLAN ID 的機器才能彼此通訊，即便 LAN 線路接到同一個 hub 或 sw 上，只要 VLAN ID 不同就無法通訊。
+
+* 使用命令列（指令）作設定
+
+* 使用設定檔作設定
      
