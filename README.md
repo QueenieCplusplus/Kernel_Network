@@ -301,8 +301,7 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 
 * 執行 ifup 指令後，kernel 即可正常識別這些 vlan。
                         
-    
-    
+       
     # cat /proc/net/vlan/config
     
     VLAN Dev name | VLAN ID
@@ -313,7 +312,7 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
     
     # ifconfig
     
-    eth0
+    eth0.100
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.100 Bcast:192.168.3.255 Mask: 255.255.255.0
