@@ -164,6 +164,16 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
         IPADDR=192.168.1.100
         ONBOOT=yes
         VLAN=yes
+        
+    # cat ifcfg-vlan002 檔名
+     
+        DEVICE=vlan002
+        TYPE=Ethernet
+        BOOTPROTO=static
+        IPADDR=192.168.1.102
+        ONBOOT=yes
+        VLAN=yes
+        PHYSDEV=eth0
  
  
  
