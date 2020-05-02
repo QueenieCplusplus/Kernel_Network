@@ -313,13 +313,13 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
     
     # ifconfig
     
-    eth0(.100)
+    eth0
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.100 Bcast:192.168.3.255 Mask: 255.255.255.0
            UP Bcast running slave Multicast MTU:1500 Metric:1
     
-    eth0.001(101)
+    eth0.001
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.101 Bcast:192.168.3.255 Mask: 255.255.255.0
@@ -333,7 +333,7 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
            inet addr: 192.168.3.102 Bcast:192.168.1.255 Mask: 255.255.255.0
            UP Bcast running slave Multicast MTU:1500 Metric:1
         
-    vlan3(003)
+    vlan3
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.103 Bcast:192.168.1.255 Mask: 255.255.255.0
