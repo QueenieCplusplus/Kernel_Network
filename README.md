@@ -174,7 +174,62 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
         ONBOOT=yes
         VLAN=yes
         PHYSDEV=eth0
- 
- 
- 
- 
+        
+    # cat ifcfg-eth0.001 檔名
+     
+        DEVICE=etho0.001
+        TYPE=Ethernet
+        BOOTPROTO=static
+        IPADDR=192.168.1.XXX
+        ONBOOT=yes
+        VLAN=yes
+        
+    # cat ifcfg-vlan3 檔名    
+    
+        DEVICE=vlan3
+        TYPE=Ethernet
+        BOOTPROTO=static
+        IPADDR=192.168.1.XXX
+        ONBOOT=yes
+        VLAN=yes
+        PHYSDEV=eth0   
+        
+    # ifup eth0.001
+    # ifup vlan002
+    # ifup vlan3
+    # cat /proc/net/vlan/config
+    
+    VLAN Dev name | VLAN ID
+    Name-Type: VLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
+    eth0.001 | 1 | eth0
+    vlan002  | 2 | etho
+    vlan3    | 3 | eth0
+    
+    # ifconfig
+    
+    eth0(.100)
+    
+           Link encap: Ethernet HWaddr (略)
+           inet addr: 192.168.3.100 Bcast:192.168.3.255 Mask: 255.255.255.0
+           UP Bcast running slave Multicast MTU:1500 Metric:1
+    
+    eth0.001(101)
+    
+           Link encap: Ethernet HWaddr (略)
+           inet addr: 192.168.3.101 Bcast:192.168.3.255 Mask: 255.255.255.0
+           UP Bcast running slave Multicast MTU:1500 Metric:1
+           
+           
+    
+    vlan002
+    
+           Link encap: Ethernet HWaddr (略)
+           inet addr: 192.168.3.102 Bcast:192.168.1.255 Mask: 255.255.255.0
+           UP Bcast running slave Multicast MTU:1500 Metric:1
+        
+    vlan3(003)
+    
+           Link encap: Ethernet HWaddr (略)
+           inet addr: 192.168.3.103 Bcast:192.168.1.255 Mask: 255.255.255.0
+           UP Bcast running slave Multicast MTU:1500 Metric:1
+    
