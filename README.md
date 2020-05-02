@@ -150,6 +150,32 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 * 使用命令列（指令）作設定
 
  使用 vconfig 指令與 ip 指令。
+     
+     
+     
+     
+    // 
+       
+       以 vconfig 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
+       
+                                                            //
+ 
+     # vconfig add eth0 100
+     
+      added Vlan VID == 100 to IF -:eth0:-
+      
+      
+           
+    // 
+       
+       以 ip 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
+       
+                                                            //
+      
+     # ip link add link eth0 name eth0.100 type vlan id 100
+     
+     這是以 NIC 網卡（又稱網路孔洞）eth0 建立 Vlan ID 100 的 Vlan 介面，與一般網路介面一樣，可設定 IP 位置。
+        
 
 * 使用設定檔作設定
 
