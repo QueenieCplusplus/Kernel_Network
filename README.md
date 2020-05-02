@@ -253,7 +253,7 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 # 使用設定檔作設定
                                                                                                           
 
-在 /etc/sysconfig/network-scripts/ 準備 eth0.100 用的設定檔案，可以在系統啟動時自動建立Ｖlan 介面。
+* 在 /etc/sysconfig/network-scripts/ 準備 eth0.100 用的設定檔案，可以在系統啟動時自動建立Ｖlan 介面。
 
      
     # cat ifcfg-eth0.100 檔名
@@ -298,11 +298,9 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
     # ifup vlan002
     # ifup vlan3
     
-//
 
-  執行 ifup 指令後，kernel 即可正常識別這些 vlan。
+* 執行 ifup 指令後，kernel 即可正常識別這些 vlan。
                         
-                                             //
     
     
     # cat /proc/net/vlan/config
