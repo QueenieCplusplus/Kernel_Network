@@ -253,7 +253,7 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 # 使用設定檔作設定
                                                                                                           
 
-* 在 /etc/sysconfig/network-scripts/ 準備 eth0.100 用的設定檔案，可以在系統啟動時自動建立Ｖlan 介面。
+在 /etc/sysconfig/network-scripts/ 準備 eth0.100 用的設定檔案，可以在系統啟動時自動建立Ｖlan 介面。
 
      
     # cat ifcfg-eth0.100 檔名
@@ -302,23 +302,24 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 * 執行 ifup 指令後，kernel 即可正常識別這些 vlan。
                         
        
-    # cat /proc/net/vlan/config
+      # cat /proc/net/vlan/config
+
+      VLAN Dev name | VLAN ID
+      Name-Type: VLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
+      eth0.001 | 1 | eth0
+      vlan002  | 2 | etho
+      vlan3    | 3 | eth0
     
-    VLAN Dev name | VLAN ID
-    Name-Type: VLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
-    eth0.001 | 1 | eth0
-    vlan002  | 2 | etho
-    vlan3    | 3 | eth0
+  
+      # ifconfig
     
-    # ifconfig
-    
-    eth0.100
+      eth0.100
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.100 Bcast:192.168.3.255 Mask: 255.255.255.0
            UP Bcast running slave Multicast MTU:1500 Metric:1
     
-    eth0.001
+      eth0.001
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.101 Bcast:192.168.3.255 Mask: 255.255.255.0
@@ -326,13 +327,13 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
            
            
     
-    vlan002
+      vlan002
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.102 Bcast:192.168.1.255 Mask: 255.255.255.0
            UP Bcast running slave Multicast MTU:1500 Metric:1
         
-    vlan3
+      vlan3
     
            Link encap: Ethernet HWaddr (略)
            inet addr: 192.168.3.103 Bcast:192.168.1.255 Mask: 255.255.255.0
