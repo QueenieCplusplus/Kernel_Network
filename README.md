@@ -197,6 +197,14 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
     # ifup eth0.001
     # ifup vlan002
     # ifup vlan3
+    
+//
+
+  執行 ifup 指令後，kernel 即可正常識別這些 vlan。
+                        
+                                             //
+    
+    
     # cat /proc/net/vlan/config
     
     VLAN Dev name | VLAN ID
