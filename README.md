@@ -191,33 +191,28 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
      
      
      
-     
-    // 
+* 以 vconfig 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
        
-       以 vconfig 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
-       
-                                                            //
+                                                            
  
-     # vconfig add eth0 100
+      # vconfig add eth0 100
      
       added Vlan VID == 100 to IF -:eth0:-
       
       
            
-    // 
+* 以 ip 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
        
-       以 ip 指令建立 Vlan 介面的做法，先把 vlan ID 作設定。
-       
-                                                            //
+
       
-     # ip link add link eth0 name eth0.100 type vlan id 100
+      # ip link add link eth0 name eth0.100 type vlan id 100
      
-    // 
+   
     
     
-       這是以 NIC 網卡（又稱網路孔洞）eth0 建立 Vlan ID 100 的 Vlan 介面，與一般網路介面一樣，可設定 IP 位置。
+* 這是以 NIC 網卡（又稱網路孔洞）eth0 建立 Vlan ID 100 的 Vlan 介面，與一般網路介面一樣，可設定 IP 位置。
        
-                                                            //
+      
                                                             
       # ifconfig eth0.100 192.168.1.100
       # ifconfig eth0.100
@@ -226,13 +221,9 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
                inet addr: 192.168.1.100 Bcast: 192.168.1.255 Mask:255.255.255.0
                UP Bcast Running Multicast MTU:1500 Metric:1
                
- // 
     
-    
-       
-       建立 Vlan 介面狀態可以透過 /proc/net/vlan 確認。
+* 建立 Vlan 介面狀態可以透過 /proc/net/vlan 確認。
                                                          
-                                                         //
                                                          
        # ls /proc/net/vlan/
        config eth0.100
@@ -245,21 +236,17 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
        eth0.100 | 100 | eth0
        
        
- // 
-    
-    
-       
-       刪除 vlan 介面，可以透過指令 rem 和 delete 完成。
+* 刪除 vlan 介面，可以透過指令 rem 和 delete 完成。
                                                          
-                                                         //
                                                          
        # vconfig rem eth0.100 || # ip link delete eth0.100
        
 
 ------------
                                                                                                               
-                                                                                                           使用設定檔作設定
-                                                                                                           
+                                                                                                          
+ //
+ 
  
 ------------
 
