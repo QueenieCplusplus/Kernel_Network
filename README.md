@@ -152,4 +152,6 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
 * 使用命令列（指令）作設定
 
 * 使用設定檔作設定
+
+在 /etc/sysconfig/network-scripts/ 準備 eth0.100 用的
      
