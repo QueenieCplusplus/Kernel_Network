@@ -312,3 +312,5 @@ Linux 實做了 802.1Q tagged VLAN 功能，Vlan 就是將乙太網路進行虛�
            inet addr: 192.168.3.103 Bcast:192.168.1.255 Mask: 255.255.255.0
            UP Bcast running slave Multicast MTU:1500 Metric:1
     
+
+
